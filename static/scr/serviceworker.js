@@ -1,11 +1,11 @@
 const CACHE_NAME = 'dominion-counter';
 let urlsToCache = [
-  '/',
-  'static/css/common.css',
-  'static/css/reset.min.css',
-  'static/scr/common.js',
-  'static/scr/manifest.json',
-  'static/scr/serviceworker.js',
+  '/dominion-counter/',
+  '/dominion-counter/static/css/common.css',
+  '/dominion-counter/static/css/reset.min.css',
+  '/dominion-counter/static/scr/common.js',
+  '/dominion-counter/static/scr/manifest.json',
+  '/dominion-counter/static/scr/serviceworker.js',
 ];
 
 // インストール処理
