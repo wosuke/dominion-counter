@@ -1,6 +1,15 @@
 let counter = 1;
 
 $(function(){
+
+  if( 'serviceWorker' in navigator ) {
+    navigator.serviceWorker.register('static/scr/serviceworker.js').then(function(registration){
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(e){
+      console.log('ServiceWorker registration failed: ', e);
+    });
+  }
+
   // if( storageAvailable('localStorage') ) {
   //   console.log('can storage');
   // } else {
