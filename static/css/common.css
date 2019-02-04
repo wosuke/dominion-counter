@@ -30,8 +30,6 @@ main {
 main>dl {
   position: relative;
   display: block;
-  /* border: 1em solid rgba(0, 0, 0, 0.4);
-  border-radius: 50%; */
 }
 main>dl>dt {
   position: relative;
@@ -39,8 +37,6 @@ main>dl>dt {
   width: 100%;
   height: 2em;
   text-align: center;
-  /* border-bottom: 1px solid #696969;
-  border-collapse: collapse; */
 }
 main>dl>dt>p {
   letter-spacing: .2em;
