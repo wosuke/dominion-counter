@@ -66,6 +66,42 @@ main>dl:nth-child(2)>dd {
 main>dl:nth-child(3)>dd {
   border: 1em solid rgba(230, 180, 34, 0.3);
 }
+main>dl>dd>div {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+}
+main>dl>dd>div::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  width: 1em;
+  height: 1em;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: auto 0;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 2.5em;
+  font-weight: bold;
+}
+main>dl>dd>div:nth-child(1)::before {
+  content: "+";
+  right: -0.5em;
+}
+main>dl>dd>div:nth-child(2)::before {
+  content: "-";
+  right: -0.65em;
+}
+main>dl>dd>div:nth-child(1) {
+  top: 0;
+}
+main>dl>dd>div:nth-child(2) {
+  bottom: 0;
+}
 main>dl>dd>p {
   font-size: 2em;
   font-weight: bold;
@@ -84,6 +120,42 @@ p#reset {
   border: 2px solid #cdcdcd;
   border-collapse: collapse;
   margin: 0 auto;
+}
+img#barcode {
+  position: fixed;
+  display: block;
+  top:   0.7em;
+  right: 1.0em;
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+}
+div#qr_code {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  margin-top: -100vh;
+  transition: margin-top .5s;
+}
+div#qr_code.view {
+  margin-top: 0;
+}
+div#qr_code>img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  max-width: 222px;
 }
 /* スクリーン[縦] */
 @media screen and (orientation: portrait) {

@@ -80,34 +80,63 @@ $(function(){
     });
   }
 
-  $('#add_a').click(function(){
-    count_a++;
-    $(this).children('p').html(count_a);
+  function updata_func(obj,alpha){
+    obj.nextAll('p').html(alpha);
     dbUpdate();
-  }).on('touchstart',function(){
+  }
+
+  $('#add_a').on('touchstart',function(){
     $(this).css('border','1em solid rgba(230, 82, 34, 0.7)');
   }).on('touchend',function(){
     $(this).css('border','1em solid rgba(230, 82, 34, 0.3)');
   });
+  $('#add_a_u').click(function(){
+    count_a++;
+    updata_func($(this),count_a);
+  });
+  $('#add_a_d').click(function(){
+    if(count_a >= 1) {
+      count_a--;
+      updata_func($(this),count_a);
+    }
+  });
 
-  $('#add_b').click(function(){
-    count_b++;
-    $(this).children('p').html(count_b);
-    dbUpdate();
-  }).on('touchstart',function(){
+  $('#add_b').on('touchstart',function(){
     $(this).css('border','1em solid rgba(182, 230, 34, 0.7)');
   }).on('touchend',function(){
     $(this).css('border','1em solid rgba(182, 230, 34, 0.3)');
   });
+  $('#add_b_u').click(function(){
+    count_b++;
+    updata_func($(this),count_b);
+  });
+  $('#add_b_d').click(function(){
+    if(count_b >= 1) {
+      count_b--;
+      updata_func($(this),count_b);
+    }
+  });
 
-  $('#add_c').click(function(){
-    count_c++;
-    $(this).children('p').html(count_c);
-    dbUpdate();
-  }).on('touchstart',function(){
+  $('#add_c').on('touchstart',function(){
     $(this).css('border','1em solid rgba(230, 180, 34, 0.7)');
   }).on('touchend',function(){
     $(this).css('border','1em solid rgba(230, 180, 34, 0.3)');
+  });
+  $('#add_c_u').click(function(){
+    count_c++;
+    updata_func($(this),count_c);
+  });
+  $('#add_c_d').click(function(){
+    if(count_c >= 1) {
+      count_c--;
+      updata_func($(this),count_c);
+    }
+  });
+
+  $('dl>dd>div').on('touchstart',function(){
+    $(this).css('opacity',1);
+  }).on('touchend',function(){
+    $(this).css('opacity',0);
   });
 
   $('#reset').click(function(){
@@ -118,6 +147,13 @@ $(function(){
     $('#add_b>p').html(count_b);
     $('#add_c>p').html(count_c);
     dbUpdate();
+  });
+
+  $('#barcode').click(function(){
+    $('#qr_code').addClass('view');
+  });
+  $('#qr_code').click(function(){
+    $(this).removeClass('view');
   });
 
 });
