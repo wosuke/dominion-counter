@@ -76,11 +76,13 @@ p#reset {
   left:   0;
   right:  0;
   height: 3em;
-  color: #696969;
+  color: #cdcdcd;
   font-size: .8em;
   line-height: 3em;
   text-align: center;
-  border: 1px solid #696969;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px solid #cdcdcd;
+  border-collapse: collapse;
   margin: 0 auto;
 }
 /* スクリーン[縦] */

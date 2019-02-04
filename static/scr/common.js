@@ -84,18 +84,30 @@ $(function(){
     count_a++;
     $(this).children('p').html(count_a);
     dbUpdate();
+  }).on('touchstart',function(){
+    $(this).css('border','1em solid rgba(230, 82, 34, 0.7)');
+  }).on('touchend',function(){
+    $(this).css('border','1em solid rgba(230, 82, 34, 0.3)');
   });
 
   $('#add_b').click(function(){
     count_b++;
     $(this).children('p').html(count_b);
     dbUpdate();
+  }).on('touchstart',function(){
+    $(this).css('border','1em solid rgba(182, 230, 34, 0.7)');
+  }).on('touchend',function(){
+    $(this).css('border','1em solid rgba(182, 230, 34, 0.3)');
   });
 
   $('#add_c').click(function(){
     count_c++;
     $(this).children('p').html(count_c);
     dbUpdate();
+  }).on('touchstart',function(){
+    $(this).css('border','1em solid rgba(230, 180, 34, 0.7)');
+  }).on('touchend',function(){
+    $(this).css('border','1em solid rgba(230, 180, 34, 0.3)');
   });
 
   $('#reset').click(function(){
