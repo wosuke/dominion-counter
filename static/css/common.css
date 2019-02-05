@@ -175,11 +175,10 @@ div#qr_code>img {
   body {
     top: -1em;
     height: calc(100% + 1em);
-    padding-top: 1em;
-    box-sizing: border-box;
   }
   main {
     flex-direction: column;
+    padding-top: 2em;
     padding-bottom: 5em;
   }
   main>dl {
