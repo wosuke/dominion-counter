@@ -9,10 +9,8 @@ html, body {
 }
 body {
   position: fixed;
-  top: -1em;
   left: 0;
   width: 100%;
-  height: calc(100% + 1em);
 }
 main {
   position: relative;
@@ -174,6 +172,12 @@ div#qr_code>img {
 }
 /* スクリーン[縦] */
 @media screen and (orientation: portrait) {
+  body {
+    top: -1em;
+    height: calc(100% + 1em);
+    padding-top: 1em;
+    box-sizing: border-box;
+  }
   main {
     flex-direction: column;
     padding-bottom: 5em;
@@ -198,6 +202,10 @@ div#qr_code>img {
 }
 /* スクリーン[横] */
 @media screen and (orientation: landscape) {
+  body {
+    top: 0;
+    height: 100%;
+  }
   main {
     flex-direction: row;
     padding-bottom: 3em;
